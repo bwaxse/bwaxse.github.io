@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.niaid.nih.gov/about/infectious-diseases-fellowship-research-training'>NIAID</a> Med-Peds ID Fellow Doing EHR Informatics Research at <a href='[https://www.genome.gov/](https://www.genome.gov/about-nhgri/Division-of-Intramural-Research/Center-for-Precision-Health-Research)'>NHGRI</a> | Driven by data, music, bicycle
+subtitle: <a href='https://www.niaid.nih.gov/about/infectious-diseases-fellowship-research-training'>NIAID</a>, <a href='https:/www.genome.gov/about-nhgri/Division-of-Intramural-Research/Center-for-Precision-Health-Research'>NHGRI</a> | Driven by data, music, bicycle
 
 profile:
   align: right
