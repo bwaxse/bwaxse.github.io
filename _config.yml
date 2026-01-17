@@ -59,9 +59,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name    : "Bennett Waxse"
+  name    : "Bennett Waxse, MD, PhD"
   avatar  : "/assets/images/prof_pic.jpg"
-  bio     : "MD, PhD | Research Data Scientist"
+  bio     : "EHR Data Scientist | Claude Code Enthusiast"
   location: "Denver, CO"
   links:
     - label: "Website"
