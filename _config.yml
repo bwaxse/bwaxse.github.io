@@ -60,7 +60,7 @@ plugins:
 
 author:
   name    : "Bennett Waxse"
-  avatar  : "/assets/img/prof_pic.jpg"
+  avatar  : "/assets/images/prof_pic.jpg"
   bio     : "MD, PhD | Research Data Scientist"
   location: "Denver, CO"
   links:
