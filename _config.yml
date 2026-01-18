@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: bennettwaxse.com
 email: bennettwaxse@gmail.com
-description: EHR Data Scientist | Real-World Evidence | Claude Code Enthusiast
+description: EHR informatics fellow exploring how frontier AI unlocks computational methods for biomedical research
 url: https://bennettwaxse.com
 repository: bwaxse/bwaxse.github.io
 # twitter_username: username
@@ -61,7 +61,7 @@ plugins:
 author:
   name    : "Bennett Waxse, MD, PhD"
   avatar  : "/assets/images/prof_pic.jpg"
-  bio     : "Data • Science"
+  bio     : "Researcg Informatics • Genomics"
   location: "Denver, CO"
   links:
     - label: "Website"
