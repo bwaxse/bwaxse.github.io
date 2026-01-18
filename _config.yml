@@ -61,7 +61,7 @@ plugins:
 author:
   name    : "Bennett Waxse, MD, PhD"
   avatar  : "/assets/images/prof_pic.jpg"
-  bio     : "Informativs • Genomics • Claude Code"
+  bio     : "Informatics • Genomics • Claude Code"
   location: "Denver, CO"
   links:
     - label: "Website"
@@ -73,6 +73,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bwaxse/"
+    - label: "LinkedIn"
+      icon: "fas fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/waxse/"
 
 footer:
   links:
