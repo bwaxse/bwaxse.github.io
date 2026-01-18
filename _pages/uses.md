@@ -7,27 +7,23 @@ Software and tools I use for biomedical informatics and genomics research.
 
 ## AI & Development
 
-**Claude (Anthropic)** - Primary assistant for coding, analysis planning, and technical writing. Claude Code accelerates pipeline development and debugging.
+**Claude (Anthropic)** - Primary assistant for coding, analysis planning, and reviewing technical writing. Claude Code accelerates pipeline development and debugging.
 
-**Cursor** - AI-enhanced code editor. Makes refactoring and exploratory programming significantly faster.
-
-**GitHub** - Version control for all projects. Automated workflows with Actions for notebook scrubbing and reproducibility.
+**GitHub** - Version control for all projects.
 
 ## Data Analysis
 
-**Python** - Primary language. Heavy use of pandas, polars, numpy, scipy, statsmodels.
+**Python** - Primary language. Heavy use of polars, numpy, scipy, statsmodels.
 
-**R** - Secondary for specialized packages (particularly SAIGE for genetic association testing).
+**R** - Secondary for specialized packages (MatchIt for matching, SAIGE for genetic association testing).
 
-**Jupyter/Quarto** - Notebooks for exploratory analysis and reproducible reporting.
-
-**DuckDB** - Fast SQL analytics on local files. Great for EHR data exploration.
+**Jupyter** - Notebooks for exploratory analysis and reproducible reporting.
 
 ## Genomics & Bioinformatics
 
 **GATK** - Variant calling pipelines, parallelized with GNU parallel for performance.
 
-**PLINK/PLINK2** - Genetic data QC and association testing.
+**PLINK2** - Genetic data QC and association testing.
 
 **SAIGE** - Mixed model association testing for biobank-scale data.
 
@@ -35,23 +31,17 @@ Software and tools I use for biomedical informatics and genomics research.
 
 ## Computing Infrastructure
 
-**Google Cloud** - dsub for batch job orchestration on genomics workflows.
+**Google Cloud** - dsub for batch job orchestration on workflows at scale.
 
 **Verily Workbench** - Secure analysis environment for *All of Us* data.
 
-**GNU parallel** - Simple but powerful parallelization for embarrassingly parallel tasks.
+**GNU parallel** - Simple but powerful parallelization.
 
 ## Writing & Organization
 
 **Notion** - Research notes, literature tracking, project management.
 
-**Zotero** - Reference management integrated with Notion for literature review workflows.
-
-## Communication
-
-**Slack** - Team collaboration.
-
-**Linear** - Project tracking for Scholia development.
+**Zotero** - Reference management integrated with Scholia.fyi for literature review workflows.
 
 ---
 
