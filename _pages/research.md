@@ -5,9 +5,6 @@ title: "Research"
 
 ## Current Projects
 
-**KIR Genetics and Severe COVID**  
-Investigating killer cell immunoglobulin-like receptor (KIR) haplotype associations with COVID-19 outcomes using *All of Us* genomic data. Work involves parallelized variant calling pipelines and genetic association testing in immunosuppressed populations.
-
 **Long COVID Phenotyping**  
 Developing EHR-based phenotype definitions and risk scores for post-acute sequelae of SARS-CoV-2 infection (PASC). Integrating survey data with clinical encounters to identify predictive factors and validate measurement approaches.
 
