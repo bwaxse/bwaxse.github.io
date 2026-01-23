@@ -89,7 +89,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments:
         provider: "giscus"
         giscus:
           repo_id              : R_kgDOQ751gQ # Shown during giscus setup at https://giscus.app
