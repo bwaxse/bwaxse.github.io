@@ -71,13 +71,13 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bwaxse/"
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/waxse/"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=16OEFu8AAAAJ&hl=en"
     - label: "ORCID"
-      icon: "fas fa-fw fa-orcid"
+      icon: "ai ai-orcid"
       url: "https://orcid.org/0000-0001-5086-3419"
 
 footer:
