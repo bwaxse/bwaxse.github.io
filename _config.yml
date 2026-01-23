@@ -77,7 +77,7 @@ author:
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=16OEFu8AAAAJ&hl=en"
     - label: "ORCID"
-      icon: "ai ai-orcid"
+      icon: "fab fa-fw fa-orcid"
       url: "https://orcid.org/0000-0001-5086-3419"
 
 footer:
