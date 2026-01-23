@@ -64,9 +64,6 @@ author:
   bio     : "Informatics • Genomics • Claude Code"
   location: "Denver, CO"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://bennettwaxse.com"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:bennettwaxse@gmail.com"
