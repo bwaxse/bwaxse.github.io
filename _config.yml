@@ -115,18 +115,18 @@ tag_archive:
 
 comments:
   provider: "giscus"
-    giscus:
-      repo_id              : R_kgDOQ751gQ # Shown during giscus setup at https://giscus.app
-      category_name        : General # Full text name of the category
-      category_id          : DIC_kwDOQ751gc4C1V6t # Shown during giscus setup at https://giscus.app
-      discussion_term      : pathname # "pathname" (default), "url", "title", "og:title"
-      reactions_enabled    : 1 # '1' for enabled (default), '0' for disabled
-      theme                : light # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-      strict               : 1 # 1 for enabled, 0 for disabled (default)
-      input_position       : bottom # "top", "bottom" # The comment input box will be placed above or below the comments
-      emit_metadata        : 0 # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
-      lang                 : en # "en" (default)
-      lazy                 : true # true, false # Loading of the comments will be deferred until the user scrolls near the comments container.
+  giscus:
+    repo_id              : R_kgDOQ751gQ # Shown during giscus setup at https://giscus.app
+    category_name        : General # Full text name of the category
+    category_id          : DIC_kwDOQ751gc4C1V6t # Shown during giscus setup at https://giscus.app
+    discussion_term      : pathname # "pathname" (default), "url", "title", "og:title"
+    reactions_enabled    : 1 # '1' for enabled (default), '0' for disabled
+    theme                : light # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    strict               : 1 # 1 for enabled, 0 for disabled (default)
+    input_position       : bottom # "top", "bottom" # The comment input box will be placed above or below the comments
+    emit_metadata        : 0 # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
+    lang                 : en # "en" (default)
+    lazy                 : true # true, false # Loading of the comments will be deferred until the user scrolls near the comments container.
 
 analytics:
   provider: "google-gtag"
