@@ -1,5 +1,6 @@
 ---
 title: "Using Claude Code for Genomic Pipeline Optimization: A KIR Mapper Case Study"
+comments: true
 date: 2025-01-23T14:00:00-05:00
 categories:
   - Blog
