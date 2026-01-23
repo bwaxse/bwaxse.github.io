@@ -89,8 +89,9 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-        giscus: true
+      comments:
+        provider: "giscus"
+        giscus:
           repo_id              : R_kgDOQ751gQ # Shown during giscus setup at https://giscus.app
           category_name        : General # Full text name of the category
           category_id          : DIC_kwDOQ751gc4C1V6t # Shown during giscus setup at https://giscus.app
