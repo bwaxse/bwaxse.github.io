@@ -83,7 +83,7 @@ author:
     - label: "Spotify"
       icon: "fab fa-fw fa-spotify"
       url: "https://open.spotify.com/user/bwaxse"
-      - label: "Mixcloud"
+    - label: "Mixcloud"
       icon: "fab fa-fw fa-mixcloud"
       url: "https://www.mixcloud.com/bwaxse/"
 
