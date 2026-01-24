@@ -22,6 +22,7 @@ repository: bwaxse/bwaxse.github.io
 github_username: bwaxse
 minimal_mistakes_skin: dirt
 search: true
+favicon: /assets/images/favicon.ico
 
 # Build settings
 markdown: kramdown
