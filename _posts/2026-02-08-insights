@@ -1,0 +1,127 @@
+---
+title: "What Claude Code's /insights Taught Me About My Workflow"
+date: 2026-02-08T22:15:00-05:00
+excerpt: "Claude Code analyzed 1,295 messages across 325 files and diagnosed my workflow bottlenecks with surgical precision."
+categories:
+  - Blog
+  - Bioinformatics
+  - Tools
+tags:
+  - Claude Code
+  - Bioinformatics
+  - AI
+  - LLM
+  - Research Informatics
+  - Productivity
+toc: true
+toc_sticky: true
+toc_label: "Contents"
+comments: true
+---
+
+It will surprise no one that I love data, and the `/insights` command from Claude Code delivered.
+
+1,295 messages across 325 files (+60,192/-13,058 lines of code) over 82 sessions spanning five weeks. 
+
+## The Summary Felt Spot-On
+
+Claude Code characterized my workflow as "a deeply hands-on, iterative debugger who uses Claude Code as a persistent collaborator." The key pattern it identified:
+
+> You drive complex, multi-file changes through rapid iterative cycles—letting Claude attempt solutions, catching errors and wrong approaches in real time, and steering toward simpler implementations with hands-on corrective feedback.
+
+It felt good to see growing competency, but I also learned a reality of my use: I rarely give exhaustive upfront specifications. Instead, I describe a goal and steer Claude through implementation with real-time feedback—a "try it and fix it" philosophy.
+
+## But the Diagnostic Section Hit Harder
+
+What surprised me its surgical precision of the diagnostics. Claude Code didn't just tell me what I was doing; it told me where things were breaking down and why.
+
+### Where Things Broke Down
+
+**Incorrect Initial Implementations Requiring Multiple Fix Cycles**
+
+Claude's first-pass code frequently contained bugs—wrong API access patterns, broken migrations, incorrect UI wiring. The report cited specific examples:
+
+> Stripe subscription date extraction failed three times (direct attribute access, wrong `.get()` level, then finally `items.data[0]`), and credits still weren't granted afterward—burning an entire session on what should have been a straightforward API integration.
+
+The fix: "Providing more explicit specifications upfront (e.g., expected Stripe object structures, exact DB constraints) or asking Claude to outline its approach before coding could reduce these costly iteration rounds."
+
+**Wrong Solution Architecture Before User Correction**
+
+Claude repeatedly proposed overly complex solutions—wrapper abstractions, symlink chains, /tmp hacks—when I already knew a simpler approach existed. Example from my genomics pipeline work:
+
+> For GCS file localization, Claude cycled through symlinks, gsutil in-script, and dirname approaches before you steered it to the straightforward FUSE mount solution you wanted from the start.
+
+The insight: State architectural preferences upfront. "Use FUSE mounts, not gsutil" or "no wrapper classes" would have short-circuited wasted iteration.
+
+**Aggressive Edits Without Verification**
+
+Claude often applied changes too eagerly—editing documents without pausing for review, adding more content than requested, or committing unwanted files. I interrupted tool calls twice during document editing because Claude was applying changes without letting me review intermediate results.
+
+The data quantified this: 20 instances of "wrong approach" friction and 19 instances of "buggy code," but only 3 rejected actions and 2 user interruptions. I prefer to let Claude attempt things and then correct rather than pre-empt.
+
+## The Improvements
+
+Then came the actionable section—not generic advice, but specific refinements drawn from actual sessions:
+
+### 1. Exact Prompts for CLAUDE.md
+
+The report generated precise additions for my project documentation based on pain points from our sessions:
+
+```markdown
+When working with Stripe API objects, always access nested data through 
+`items.data[0]` for subscription details. Never use `.get()` or direct 
+attribute access on top-level Stripe objects for period dates.
+```
+
+This wasn't general strategy. It was extracted from three failed attempts at the same integration pattern.
+
+### 2. Lifecycle Hooks
+
+The report suggested hooks to auto-run linting or tests after edits, catching buggy first-pass implementations before I see them. Example:
+
+```yaml
+hooks:
+  post-edit:
+    # Auto-run linter after Python edits
+    - if: "file.endsWith('.py')"
+      run: "ruff check {file}"
+```
+
+### 3. Better Prompt Patterns
+
+Example prompts showing how to add context up front, guide iterative fixes, and spawn parallel agents. One particularly useful pattern for my genomics pipeline work:
+
+```markdown
+Context: KIR-mapper pipeline using dsub + Google Batch. Prefer FUSE mounts 
+over gsutil. No wrapper abstractions around dsub functions.
+
+Task: Debug why pipeline stalls at sample 199/200...
+```
+
+## The Meta-Learning
+
+A tool that accelerates my data processing is also teaching me to use it better. The meta-analysis of my own workflow is as valuable as the code it helped me write.
+
+The report revealed patterns I hadn't yet noticed:
+- My median response time to Claude is 98.6 seconds (average 316.3s)—I'm actively engaged, not fire-and-forget
+- 24 of 82 sessions were "Iterative Refinement" type—my most common workflow
+- Multi-file changes were Claude's most helpful capability (20 instances), followed by correct code edits (13)
+
+## What I'm Implementing
+
+Based on these diagnostics:
+
+1. **Enhanced CLAUDE.md files** with tech stack preferences, data processing constraints, and architectural patterns drawn from actual failure modes
+2. **Pre-commit hooks** for automatic linting and basic test runs
+3. **More upfront context** in prompts—especially example data structures for API integrations and explicit architectural constraints for infrastructure work
+
+The report also suggested I'm ready for more ambitious workflows as models improve:
+> Your most painful sessions—multi-round pipeline debugging and Stripe integration fixes—should become single-prompt workflows where Claude autonomously iterates against your test suite until everything passes.
+
+That's the future I'm building toward: test coverage comprehensive enough that future Claude can self-correct without intervention.
+
+## Try It Yourself
+
+If you're using Claude Code, type `/insights` and see what workflow patterns it identifies. The Scott Cunningham method is also worth trying: ask for a slide deck, your place in the taxonomy of how people use Claude Code, and a translation of engineering-speak into concepts you understand.
+
+(Still slightly offended it called me an ICU doc...)
