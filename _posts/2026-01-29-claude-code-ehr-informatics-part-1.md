@@ -28,7 +28,7 @@ I've been using Claude Code to create cohorts, diagnose bugs, and really acceler
 
 {% capture notice-text %}
 **Coming up in this series:**
-- Part II: Skills, plugins, and MCP servers
+- [Part II: Skills, plugins, and MCP servers]({{ site.baseurl }}{% post_url 2026-03-07-claude-code-ehr-informatics-part-2 %})
 - Part III: Building a cohort in _All of Us_ with Claude Code
 {% endcapture %}
 
