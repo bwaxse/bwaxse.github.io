@@ -10,11 +10,30 @@
 // masthead, archive subtitles, footer, toc, nav dropdowns, author profile,
 // taxonomy, pagination, page h2 separators, hr, share/related/comments dividers, etc.
 $border-color: #3d3d3d;
-$footer-background-color: #3d3d3d;
+$footer-background-color: #2d2d2d;
 
 @import "minimal-mistakes/skins/dirt"; // skin
 @import "minimal-mistakes"; // main partials
 
-.masthead__menu { font-size: 0.75em; }
+// Footer: force dark background regardless of skin
+.page__footer { background-color: #2d2d2d !important; }
+
+// Masthead: seamless (no background, no bottom border)
+.masthead {
+  background-color: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+// Masthead text size
+.masthead__inner-wrap { font-size: 0.82em; }
+
+// Site title: distinctive serif
+.site-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
 
 .page__content { font-size: 0.75em; }
