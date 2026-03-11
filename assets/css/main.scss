@@ -10,6 +10,11 @@
 // masthead, archive subtitles, footer, toc, nav dropdowns, author profile,
 // taxonomy, pagination, page h2 separators, hr, share/related/comments dividers, etc.
 $border-color: #3d3d3d;
+$footer-background-color: #3d3d3d;
 
 @import "minimal-mistakes/skins/dirt"; // skin
 @import "minimal-mistakes"; // main partials
+
+.masthead__menu { font-size: 0.75em; }
+
+.page__content { font-size: 0.75em; }

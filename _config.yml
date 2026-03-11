@@ -88,10 +88,7 @@ author:
       url: "https://www.mixcloud.com/bwaxse/"
 
 footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/bwaxse/"
+  links: []
 
 defaults:
   # _posts

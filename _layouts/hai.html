@@ -17,7 +17,7 @@ layout: default
   }
   .hero {
     position: relative;
-    width: 100%; height: calc(100vh - 70px); min-height: 560px;
+    width: 100%; height: 420px; min-height: 300px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     background: #fafafa;
@@ -55,7 +55,7 @@ layout: default
     animation: scrollPulse 2.5s ease-in-out infinite;
   }
   .hai-content {
-    max-width: 560px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 96px 24px 120px;
   }
@@ -73,27 +73,7 @@ layout: default
   }
   .bio.visible { opacity: 1; transform: translateY(0); }
 
-  /* Tags: match MM's small muted pill style */
-  .tags {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
-  }
-  .tags.visible { opacity: 1; transform: translateY(0); }
-  .tag {
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    font-size: 0.6875rem;
-    font-weight: 400;
-    padding: 4px 10px;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 100px;
-    color: #6f777d;
-    letter-spacing: 0.01em;
-  }
-
-  /* Social icon strip — below tags, before divider */
+  /* Social icon strip — below bio, before divider */
   .hai-social {
     display: flex;
     gap: 18px;
@@ -162,7 +142,8 @@ layout: default
     transition: opacity 0.25s, transform 0.25s;
   }
 
-  .divider-recent { margin-top: 40px; }
+  .recent-posts .link-label { font-size: 0.703rem; }
+  .recent-posts .link-meta  { font-size: 0.5625rem; }
 
   .hai-section-heading {
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -229,13 +210,6 @@ layout: default
       Now I'm thinking carefully about what happens when we let machines help us find it.
     </p>
 
-    <div class="tags">
-      <span class="tag">Infectious Diseases</span>
-      <span class="tag">Genomics</span>
-      <span class="tag">EHR Informatics</span>
-      <span class="tag">Health AI</span>
-    </div>
-
     <div class="hai-social">
       {% for link in site.author.links %}
         <a href="{{ link.url }}" title="{{ link.label }}">
@@ -245,38 +219,6 @@ layout: default
     </div>
 
     <div class="divider"></div>
-
-    <div class="link-list">
-      <a href="/posts/" class="link-item">
-        <span class="link-label">Blog</span>
-        <span class="link-right">
-          <span class="link-meta">Claude Code, EHR informatics, genomic pipelines</span>
-          <span class="link-arrow-inline">→</span>
-        </span>
-      </a>
-      <a href="/research/" class="link-item">
-        <span class="link-label">Research</span>
-        <span class="link-right">
-          <span class="link-meta">Computational phenotyping · All of Us</span>
-          <span class="link-arrow-inline">→</span>
-        </span>
-      </a>
-      <a href="https://scholia.fyi" class="link-item">
-        <span class="link-label">Scholia.fyi</span>
-        <span class="link-right">
-          <span class="link-meta">AI-powered literature evaluation</span>
-          <span class="link-arrow-inline">→</span>
-        </span>
-      </a>
-      <a href="/uses/" class="link-item">
-        <span class="link-label">Tools &amp; Workflows</span>
-        <span class="link-right">
-          <span class="link-arrow-inline">→</span>
-        </span>
-      </a>
-    </div>
-
-    <div class="divider divider-recent"></div>
 
     <p class="hai-section-heading">Recent Posts</p>
 
@@ -570,7 +512,7 @@ layout: default
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.15 });
-  document.querySelectorAll('.bio, .tags, .hai-social, .divider, .hai-section-heading, .recent-posts').forEach(el => obs.observe(el));
+  document.querySelectorAll('.bio, .hai-social, .divider, .hai-section-heading, .recent-posts').forEach(el => obs.observe(el));
 
   window.addEventListener('resize', resize);
   resize();
