@@ -4,13 +4,11 @@ layout: default
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap');
 
-  /* Reset MM wrappers so hero can go full-width/full-height */
-  body { background: #fafafa !important; overflow-x: hidden; }
+  /* Scope background to this page's content only — leaves masthead alone */
+  .hai-body { background: #fafafa; }
+  body { overflow-x: hidden; }
   .initial-content { padding: 0 !important; margin: 0 !important; }
   #main { padding: 0 !important; }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
   .hai-body {
     color: #1d1d1f;
@@ -22,6 +20,7 @@ layout: default
     width: 100%; height: calc(100vh - 70px); min-height: 560px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
+    background: #fafafa;
     overflow: hidden;
   }
   #particle-canvas {
@@ -39,7 +38,7 @@ layout: default
     font-weight: 300;
     letter-spacing: 0.04em;
     color: #86868b;
-    margin-top: 80px;
+    margin-top: 155px;
     opacity: 0;
     animation: fadeIn 1.2s ease 2s forwards;
   }
@@ -61,6 +60,8 @@ layout: default
     padding: 96px 24px 120px;
   }
   @media (max-width: 480px) { .hai-content { padding: 64px 20px 80px; } }
+
+  /* Bio: Source Serif 4, prominent — intentionally distinct */
   .bio {
     font-size: 1.1875rem;
     line-height: 1.7;
@@ -71,91 +72,90 @@ layout: default
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
   .bio.visible { opacity: 1; transform: translateY(0); }
-  .divider {
-    width: 32px; height: 1px;
-    background: #d2d2d7;
-    margin: 0 0 48px;
-    opacity: 0;
-    transition: opacity 0.6s ease 0.1s;
-  }
-  .divider.visible { opacity: 1; }
-  .section-label {
-    font-family: -apple-system, 'Helvetica Neue', sans-serif;
-    font-size: 0.625rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #86868b;
-    margin-bottom: 20px;
-  }
-  .link-list { margin-bottom: 56px; }
-  .link-item {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    text-decoration: none;
-    color: #1d1d1f;
-    transition: color 0.2s;
-  }
-  .link-item:first-child { border-top: 1px solid rgba(0,0,0,0.05); }
-  .link-item:hover { color: #0071e3; }
-  .link-item:hover .link-label { color: #0071e3; }
-  .link-item:hover .link-meta { color: #0071e3; opacity: 0.6; }
-  .link-item:hover .link-arrow-inline { opacity: 1; transform: translateX(3px); }
-  .link-label {
-    font-family: -apple-system, 'Helvetica Neue', sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 400;
-    transition: color 0.2s;
-  }
-  .link-right { display: flex; align-items: baseline; gap: 12px; }
-  .link-meta {
-    font-family: -apple-system, 'Helvetica Neue', sans-serif;
-    font-size: 0.75rem;
-    color: #86868b;
-    transition: color 0.2s, opacity 0.2s;
-  }
-  .link-arrow-inline {
-    font-size: 0.75rem;
-    color: #86868b;
-    opacity: 0;
-    transition: opacity 0.25s, transform 0.25s;
-  }
+
+  /* Tags: match MM's small muted pill style */
   .tags {
     display: flex; flex-wrap: wrap; gap: 8px;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
     opacity: 0;
     transform: translateY(12px);
     transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
   }
   .tags.visible { opacity: 1; transform: translateY(0); }
   .tag {
-    font-family: -apple-system, 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 0.6875rem;
     font-weight: 400;
     padding: 4px 10px;
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 100px;
-    color: #86868b;
+    color: #6f777d;
     letter-spacing: 0.01em;
   }
-  .hai-footer { padding-top: 32px; border-top: 1px solid rgba(0,0,0,0.06); }
-  .hai-footer-text {
-    font-family: -apple-system, 'Helvetica Neue', sans-serif;
-    font-size: 0.6875rem;
-    color: #86868b;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
+
+  /* Social icon strip — below tags, before divider */
+  .hai-social {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 48px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s ease 0.25s, transform 0.6s ease 0.25s;
   }
-  .hai-footer-text a {
-    color: #86868b;
+  .hai-social.visible { opacity: 1; transform: translateY(0); }
+  .hai-social a {
+    color: #6f777d;
+    font-size: 1.1rem;
     text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    transition: color 0.2s, border-color 0.2s;
+    transition: color 0.2s;
   }
-  .hai-footer-text a:hover { color: #1d1d1f; border-bottom-color: rgba(0,0,0,0.3); }
+  .hai-social a:hover { color: #1d1d1f; }
+
+  .divider {
+    width: 32px; height: 1px;
+    background: #d2d2d7;
+    margin: 0 0 40px;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.1s;
+  }
+  .divider.visible { opacity: 1; }
+
+  /* Link list: MM-native sans-serif feel */
+  .link-list { margin-bottom: 0; }
+  .link-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: #494e52;
+    transition: color 0.2s;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  .link-item:first-child { border-top: 1px solid rgba(0,0,0,0.06); }
+  .link-item:hover { color: #0071e3; }
+  .link-item:hover .link-meta { color: #0071e3; opacity: 0.7; }
+  .link-item:hover .link-arrow-inline { opacity: 1; transform: translateX(3px); }
+  .link-label {
+    font-size: 0.9375rem;
+    font-weight: 400;
+  }
+  .link-right { display: flex; align-items: baseline; gap: 12px; }
+  .link-meta {
+    font-size: 0.75rem;
+    color: #6f777d;
+    transition: color 0.2s, opacity 0.2s;
+  }
+  .link-arrow-inline {
+    font-size: 0.75rem;
+    color: #6f777d;
+    opacity: 0;
+    transition: opacity 0.25s, transform 0.25s;
+  }
+
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   @keyframes scrollPulse {
     0%, 100% { opacity: 0.1; transform: scaleY(1); }
@@ -206,84 +206,53 @@ layout: default
       I've always thought there's more to the medical record than meets the eye.
       Now I'm thinking carefully about what happens when we let machines help us find it.
     </p>
+
     <div class="tags">
       <span class="tag">Infectious Diseases</span>
       <span class="tag">Genomics</span>
       <span class="tag">EHR Informatics</span>
       <span class="tag">Health AI</span>
     </div>
+
+    <div class="hai-social">
+      <a href="https://github.com/bwaxse" title="GitHub"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
+      <a href="https://scholar.google.com/citations?user=16OEFu8AAAAJ" title="Google Scholar"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i></a>
+      <a href="https://orcid.org/0000-0001-5086-3419" title="ORCID"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/waxse/" title="LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
+      <a href="https://open.spotify.com/user/bwaxse" title="Spotify"><i class="fab fa-fw fa-spotify" aria-hidden="true"></i></a>
+    </div>
+
     <div class="divider"></div>
-    <section>
-      <div class="section-label">Work</div>
-      <div class="link-list">
-        <a href="/posts/" class="link-item">
-          <span class="link-label">Blog</span>
-          <span class="link-right">
-            <span class="link-meta">Claude Code, EHR informatics, genomic pipelines</span>
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-        <a href="/research/" class="link-item">
-          <span class="link-label">Research</span>
-          <span class="link-right">
-            <span class="link-meta">Computational phenotyping · All of Us</span>
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-        <a href="https://scholia.fyi" class="link-item">
-          <span class="link-label">Scholia.fyi</span>
-          <span class="link-right">
-            <span class="link-meta">AI-powered literature evaluation</span>
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-        <a href="/uses/" class="link-item">
-          <span class="link-label">Tools & Workflows</span>
-          <span class="link-right">
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-      </div>
-    </section>
 
-    <section>
-      <div class="section-label">Elsewhere</div>
-      <div class="link-list">
-        <a href="https://github.com/bwaxse" class="link-item">
-          <span class="link-label">GitHub</span>
-          <span class="link-right">
-            <span class="link-meta">bwaxse</span>
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-        <a href="https://scholar.google.com/citations?user=16OEFu8AAAAJ" class="link-item">
-          <span class="link-label">Google Scholar</span>
-          <span class="link-right">
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/in/waxse/" class="link-item">
-          <span class="link-label">LinkedIn</span>
-          <span class="link-right">
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-        <a href="https://open.spotify.com/user/bwaxse" class="link-item">
-          <span class="link-label">Spotify</span>
-          <span class="link-right">
-            <span class="link-arrow-inline">→</span>
-          </span>
-        </a>
-      </div>
-    </section>
-
-    <footer class="hai-footer">
-      <p class="hai-footer-text">
-        <a href="https://www.genome.gov/staff/Joshua-C-Denny-MD-MS">NHGRI / NIH</a> ·
-        Internal Medicine · Pediatrics · Infectious Diseases ·
-        Denver
-      </p>
-    </footer>
+    <div class="link-list">
+      <a href="/posts/" class="link-item">
+        <span class="link-label">Blog</span>
+        <span class="link-right">
+          <span class="link-meta">Claude Code, EHR informatics, genomic pipelines</span>
+          <span class="link-arrow-inline">→</span>
+        </span>
+      </a>
+      <a href="/research/" class="link-item">
+        <span class="link-label">Research</span>
+        <span class="link-right">
+          <span class="link-meta">Computational phenotyping · All of Us</span>
+          <span class="link-arrow-inline">→</span>
+        </span>
+      </a>
+      <a href="https://scholia.fyi" class="link-item">
+        <span class="link-label">Scholia.fyi</span>
+        <span class="link-right">
+          <span class="link-meta">AI-powered literature evaluation</span>
+          <span class="link-arrow-inline">→</span>
+        </span>
+      </a>
+      <a href="/uses/" class="link-item">
+        <span class="link-label">Tools &amp; Workflows</span>
+        <span class="link-right">
+          <span class="link-arrow-inline">→</span>
+        </span>
+      </a>
+    </div>
   </div>
 
 </div>
@@ -563,7 +532,7 @@ layout: default
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.15 });
-  document.querySelectorAll('.bio, .tags, .divider').forEach(el => obs.observe(el));
+  document.querySelectorAll('.bio, .tags, .hai-social, .divider').forEach(el => obs.observe(el));
 
   window.addEventListener('resize', resize);
   resize();
