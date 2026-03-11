@@ -1,6 +1,6 @@
 ---
 layout: hai
-permalink: /hai/
+permalink: /
 title: "hai"
 author_profile: false
 ---
