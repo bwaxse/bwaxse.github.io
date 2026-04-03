@@ -24,7 +24,7 @@ This exposes that this is a fundamentally different task.
 
 The middle ground makes the story richer: models mentioned relevant conditions in 65–73% of the conversations—already a step down from benchmark performance—but users then failed to recognize or retain those conditions in their final answers. So the information was often *there* (though not 90-99% of the time), just not *transferred*.
 
-![Evaluation gap between model benchmarks and real-world user performance]({{ site.url }}{{ site.baseurl }}/assets/images/posts/2026-04-03-llm-medical-benchmark.png){: .align-center}
+! [Evaluation gap between model benchmarks and real-world user performance]({{ site.url }}{{ site.baseurl }}/assets/images/posts/2026-04-03-llm-medical-benchmark.png){: .align-center}
 
 I keep thinking about the methodology. Standalone benchmarks feed models a full clinical vignette and ask for an answer. A back-and-forth dialogue is structurally different—it distributes information across turns, requires active synthesis, and introduces retrieval demands on the human side. We already know LLMs perform better with complete context windows. This paper operationalizes that it matters in practice.
 
