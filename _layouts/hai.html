@@ -141,6 +141,8 @@ layout: default
     transition: opacity 0.25s, transform 0.25s;
   }
 
+  .pages-heading { margin-top: 40px; }
+
   .recent-posts .link-label { font-size: 0.703rem; }
   .recent-posts .link-meta  { font-size: 0.5625rem; }
 
@@ -241,6 +243,30 @@ layout: default
         </span>
       </a>
       {% endfor %}
+    </div>
+
+    <p class="hai-section-heading pages-heading">Pages</p>
+
+    <div class="link-list recent-posts site-pages">
+      <a href="/about/" class="link-item">
+        <span class="link-label">About</span>
+        <span class="link-right"><span class="link-arrow-inline">→</span></span>
+      </a>
+      <a href="/research/" class="link-item">
+        <span class="link-label">Research</span>
+        <span class="link-right"><span class="link-arrow-inline">→</span></span>
+      </a>
+      <a href="/cv/" class="link-item">
+        <span class="link-label">CV</span>
+        <span class="link-right"><span class="link-arrow-inline">→</span></span>
+      </a>
+      <a href="/assets/waxse-resume.pdf" class="link-item">
+        <span class="link-label">Résumé</span>
+        <span class="link-right">
+          <span class="link-meta">PDF</span>
+          <span class="link-arrow-inline">→</span>
+        </span>
+      </a>
     </div>
   </div>
 

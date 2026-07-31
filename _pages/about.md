@@ -15,3 +15,5 @@ I'm board-certified in Internal Medicine, Pediatrics, and Adult Infectious Disea
 This blog documents real computational work with frontier models — actual workflows, actual code, and the failures worth reporting.
 
 Outside work: family adventures with my wife and girls, cycling, yoga, and a *lot* of live music.
+
+[Résumé (PDF)](/assets/waxse-resume.pdf){: .btn .btn--primary} [Full CV](/cv/){: .btn .btn--inverse}
