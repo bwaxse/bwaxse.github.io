@@ -1,27 +1,31 @@
-# Minimal Mistakes remote theme starter
+# bennettwaxse.com
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Personal site for Bennett Waxse — clinical AI, evaluation, and biomedical informatics. Jekyll + the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) remote theme, hosted on GitHub Pages.
 
-Contains basic configuration to get you a site with:
+## Structure
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+| Path | Purpose |
+|---|---|
+| `_pages/hai.md` | Homepage (`permalink: /`), uses the custom `hai` layout |
+| `_layouts/hai.html` | Particle-animation splash, bio, recent posts |
+| `_pages/about.md` | About |
+| `_pages/research.md` | Research: clinical AI, phenotyping, genomics |
+| `_pages/cv.md` | Web CV; links to `assets/waxse-resume.pdf` |
+| `_pages/uses.md` | Tools and workflows |
+| `_posts/` | Blog posts |
+| `assets/images/posts/` | Post images, named `YYYY-MM-DD-slug-n-desc.png` |
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+## Local development
 
----
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-## Troubleshooting
+Builds at `http://localhost:4000`. Changes to `_config.yml` require a server restart.
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+## Notes
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+- `assets/waxse-resume.pdf` is the public résumé variant, with phone number and ZIP removed. The full version lives outside this repo.
+- `_layouts/hai.html` embeds canary phrases in an HTML comment to track AI-generated outreach. They sit in their own block, separate from the Feynman and Osler quotations, so the attributed text stays verbatim.
+- `.claude/` is gitignored, since local agent config can reference private paths.
