@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: bennettwaxse.com
 email: bennettwaxse@gmail.com
-description: EHR informatics fellow exploring how frontier AI unlocks computational methods for biomedical research
+description: Physician-engineer building clinical AI and the systems that measure it
 url: https://bennettwaxse.com
 repository: bwaxse/bwaxse.github.io
 # twitter_username: username
@@ -31,7 +31,7 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 10 # amount of posts to show
 paginate_path: /page:num/
-timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Denver # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -62,7 +62,7 @@ plugins:
 author:
   name    : "Bennett Waxse, MD, PhD"
   avatar  : "/assets/images/prof_pic.jpg"
-  bio     : "Informatics • Genomics • Claude Code"
+  bio     : "Clinical AI • Evaluation • Agentic Systems"
   location: "Denver, CO"
   links:
     - label: "Email"

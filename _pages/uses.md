@@ -41,7 +41,7 @@ Software and tools I use for biomedical informatics and genomics research.
 
 **Notion** - Research notes, literature tracking, project management.
 
-**Zotero** - Reference management integrated with Scholia.fyi for literature review workflows.
+**Zotero** - Reference management, wired into Claude via a custom MCP server so I can search and pull full text from the shared group library without leaving the terminal.
 
 ---
 
