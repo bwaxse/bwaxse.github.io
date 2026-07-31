@@ -2,10 +2,9 @@
 permalink: /about/
 title: "About"
 ---
-
 I'm a Senior Clinical Context Engineer at [Doctronic](https://doctronic.ai), where I build clinical AI and the systems that measure it.
 
-Day to day that means two things. On architecture, I design capabilities inside a multi-agent medical harness — the diagnostic interview subagent, the prescription refill flow, the emergency surveillance track that runs parallel to diagnostic reasoning — and the deterministic gates that keep clinical claims grounded. On evaluation, I build the infrastructure that decides whether any of it is safe to ship.
+Day to day that means two things. On architecture, I design capabilities inside a multi-agent medical harness and the deterministic gates that keep clinical claims grounded. On evaluation, I build the infrastructure that decides whether any of it is safe to ship.
 
 Producing a plausible clinical agent is cheap now. Knowing whether it works is not, and in medicine that gap is the whole problem. Most of what I've learned this year came from finding defects in the instrument rather than the model: a simulated patient that told the AI doctor it was a test case and inflated our benchmark scores, a routing signal with no schema behind it, per-case clinical data that never reached the prompt it was meant to populate. The number you're about to trust is usually the believable one nobody predicted.
 
